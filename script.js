@@ -23,8 +23,10 @@ function heartAnimate() {
         }, 3000)
     }
 
-    page.addEventListener("mousemove", mousemoveHandle);
+   
 
+    page.addEventListener("mousemove", mousemoveHandle);
+    page.addEventListener("touchmove",mousemoveHandle);
 }
 
 heartAnimate();
