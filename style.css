@@ -1,25 +1,35 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html,body{
+html,
+body {
     width: 100%;
     height: 100%;
 }
 
-.page{
+.page {
     width: 100%;
     height: 100%;
     background-color: black;
     position: relative;
 }
 
-.page-img{
+.page-img {
     width: 50px;
     position: absolute;
-    top: 10px;
-    left: 10px;
     transform: translateX(-50%) translateY(-100%) rotateZ(13deg);
+    animation-name: heart;
+    animation-duration: 6s;
+}
+
+@keyframes heart {
+ 
+
+    100% {
+        transform: translateY(-5000%);
+        filter: hue-rotate(720deg);
+    }
 }

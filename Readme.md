@@ -5,7 +5,7 @@
 - querrySelector("#id-name")
 
 # addEventListner(event-name,function)
-- ("event ka object")=>{}
+- we get event object as parameter in function
 
 - # event object ke pass 
 - event.x  // it give the position of cursor x-axis (mousemove)
