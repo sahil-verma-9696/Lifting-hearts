@@ -1,35 +1,54 @@
-* {
+/* 
+ * Global Styles 
+ * Resets default browser margins and paddings, and ensures consistent box-sizing.
+ */
+ * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Ensures consistent width and height calculations */
 }
 
+/* 
+ * HTML and Body Styles
+ * Sets the full width and height for the main viewport.
+ */
 html,
 body {
-    width: 100%;
-    height: 100%;
+    width: 100%; /* Full viewport width */
+    height: 100%; /* Full viewport height */
 }
 
+/* 
+ * Page Container 
+ * The main container for the heart animation, styled with a black background and relative positioning.
+ */
 .page {
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    position: relative;
+    width: 100%; /* Full viewport width */
+    height: 100%; /* Full viewport height */
+    background-color: black; /* Background color for contrast */
+    position: relative; /* Relative positioning to anchor child elements */
 }
 
+/* 
+ * Heart Image Styles 
+ * Styles for the dynamically generated heart elements. 
+ * Includes positioning, initial transformations, and animation properties.
+ */
 .page-img {
-    width: 50px;
-    position: absolute;
-    transform: translateX(-50%) translateY(-100%) rotateZ(13deg);
-    animation-name: heart;
-    animation-duration: 6s;
+    width: 50px; /* Fixed width for hearts */
+    position: absolute; /* Positioned absolutely relative to the .page container */
+    transform: translateX(-50%) translateY(-100%) rotateZ(13deg); /* Initial transform for placement and slight rotation */
+    animation-name: heart; /* Attach animation defined in @keyframes */
+    animation-duration: 6s; /* Duration of the animation */
 }
 
+/* 
+ * Heart Animation 
+ * Defines the animation for heart elements, making them move upward and apply a color-changing effect.
+ */
 @keyframes heart {
- 
-
     100% {
-        transform: translateY(-5000%);
-        filter: hue-rotate(720deg);
+        transform: translateY(-5000%); /* Moves the heart far upward */
+        filter: hue-rotate(720deg); /* Rotates colors for a vibrant effect */
     }
 }
